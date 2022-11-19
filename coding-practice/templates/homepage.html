@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+Welcome to the Site
+
+
+<form action="/save-name" method="POST">
+    <label for="name">Enter your name.</label><br>
+    <input type="text" name="name"><br>
+    <input type="submit">
+</form>
+{% endblock %}
