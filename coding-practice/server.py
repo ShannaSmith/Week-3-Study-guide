@@ -44,6 +44,12 @@ def show_results():
         msg = "God loves you."
     return render_template('results.html', msg=msg)
     
+@app.route('/save-name')
+def save_name():
+    name = request.form.get('name')
+    session['name'] = name
+    return redirect('/')
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
